@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaGraduationCap, FaBars } from "react-icons/fa";
+import { GraduationCap } from "lucide-react";
 
 const Education = () => {
   const [open, setOpen] = useState(false);
@@ -11,11 +11,12 @@ const Education = () => {
       title: "Coding Factory",
       date: "08/2024 - 07/2025",
       university: "Athens University of Economics and Business",
+      // link: "https://codingfactory.aueb.gr/",
       description: `Completed a backend-oriented coding bootcamp (Coding Factory –
                     AUEB), focusing on Java, development, SQL databases, and backend
                     application architecture. Worked on real-world projects, building
                     APIs and implementing object-oriented solutions, with additional
-                    training in C#, Python and front-end tools like Angular and React.`
+                    training in C#, Python and front-end tools like Angular and React.`,
     },
     {
       title: "Coding Bootcamp",
@@ -24,7 +25,7 @@ const Education = () => {
       description: `Completed an intensive coding bootcamp focused on full-stack
                     web development using JavaScript. Gained hands-on experience
                     building dynamic web applications with React on the frontend and
-                    Node.js, Express, and MongoDB on the backend.`
+                    Node.js, Express, and MongoDB on the backend.`,
     },
     {
       title: "Mechanical Engineer",
@@ -32,24 +33,37 @@ const Education = () => {
       university: "Merchant Marine Academy of Aspropyrgos",
       description: `Graduated as a Mechanical Engineer in the Merchant Navy,
                     equipped with specialized knowledge in ship machinery and
-                    marine engineering systems.`
-    }
+                    marine engineering systems.`,
+    },
   ];
 
   return (
     <section className="section education">
       <div className="edu-header">
-        <h3><FaGraduationCap /> Education</h3>
-        <button className="burger-btn" onClick={toggleMenu}>
+        <h3>
+          <GraduationCap size={24} /> Education
+        </h3>
+        {/* <button className="burger-btn" onClick={toggleMenu}>
           <FaBars />
-        </button>
+        </button> */}
       </div>
 
-      <ul className={`edu-list ${open ? "open" : ""}`}>
+      <ul className="edu-list open">
         {studies.map((study, index) => (
           <li key={index} className="edu-item">
             <div className="edu-title">
-              <span>{study.title}</span>
+              {study.title === "Coding Factory" ? (
+                <a
+                  href="https://codingfactory.aueb.gr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="edu-link"
+                >
+                  {study.title}
+                </a>
+              ) : (
+                <span>{study.title}</span>
+              )}
               <span className="edu-date">{study.date}</span>
             </div>
             <div className="edu-university">{study.university}</div>

@@ -1,18 +1,18 @@
 import React from "react";
-import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
+import {Mail, Phone, Linkedin} from "lucide-react";
 
 const Contact = () => {
   return (
     <section className="section contact">
-      <h3> <FaPhone /> Contact</h3>
+      <h3> <Phone /> Contact</h3>
       <div className="contact-icons">
         
         <a href="mailto:nektarios.tsagkaris@gmail.com" title="Email">
-          <FaEnvelope />
+           <Mail size={24} />
         </a>
       
         <a href="tel:+306983062548" title="Τηλέφωνο">
-          <FaPhone />
+          <Phone size={24} />
         </a>
         
         <a 
@@ -21,7 +21,7 @@ const Contact = () => {
           rel="noopener noreferrer" 
           title="LinkedIn"
         >
-          <FaLinkedin />
+          <Linkedin size={24} />
         </a>
       </div>
     </section>

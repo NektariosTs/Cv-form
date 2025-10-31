@@ -8,11 +8,11 @@ body, html {
   display: grid;
 
   /* Gradient με blue colors */
-  background: linear-gradient(270deg, #020204, #03041b, #08061b, #051425);
+  background: linear-gradient(to right, #142e26, #18997099);
   background-size: 800% 800%;
 
   /* Animation για smooth movement */
-  animation: blueGradientMove 7s ease infinite;
+  /* animation: blueGradientMove 7s ease infinite; */
   color: #fff; 
 }
 
@@ -40,12 +40,12 @@ body, html {
 
 /* Header  */
 header {
-  background: linear-gradient(135deg, #4b6cb7, #182848);
+  background: linear-gradient(135deg, #282727, #242526);
   color: white;
   text-align: center;
   padding: 60px 20px;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(31, 30, 30, 0.2);
   max-width: 900px;
   width: 100%;
   display: flex;
@@ -81,8 +81,8 @@ main {
 
 /* Section cards */
 .section {
-  background-color: #919496;
-  color: #333;
+  background-color: #383a3b;
+  color: #efeeee;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
@@ -93,9 +93,9 @@ main {
 
 .section:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 15px rgba(75, 108, 183, 0.4);
-  background-color: #a4b2bd;
-  border-color: rgb(111, 186, 186);
+  box-shadow: 0 0 15px rgba(63, 6, 90, 0.4);
+  background-color: #232425;
+  border-color: rgb(137, 12, 12);
 }
 
 /* Section headers */
@@ -103,13 +103,13 @@ main {
   display: flex;
   align-items: center;
   margin-top: 0;
-  color: #2c3e50;
+  color: #e6e8ea;
   font-size: 1.5em;
 }
 
 .section h3 svg {
   margin-right: 10px;
-  color: #4b6cb7;
+  color: #3ccbbd;
 }
 
 /* Skills */
@@ -123,8 +123,8 @@ main {
   display: inline-block;
   margin: 5px 8px 5px 0;
   padding: 8px 14px;
-  background: linear-gradient(135deg, #6dd5ed, #2193b0);
-  color: white;
+  background: linear-gradient(135deg, #6f7677, #178056);
+  color: rgb(253, 253, 253);
   border-radius: 12px;
   font-weight: 500;
   cursor: default;
@@ -134,18 +134,18 @@ main {
 .skills-list li:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  background: linear-gradient(135deg, #c3d1d4, #0c3038);
 }
 
 /* Links */
 a {
-  color: #4b6cb7;
+  color: #8d9097;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #182848;
+  color: #fafafa;
   text-decoration: underline;
 }
 
@@ -190,7 +190,7 @@ a:hover {
 }
 
 /* Collapsible list */
-.edu-list {
+/* .edu-list {
   list-style: none;
   padding-left: 0;
   margin-top: 12px;
@@ -199,6 +199,13 @@ a:hover {
   transition: all 0.6s ease-in-out;
   opacity: 0;
   background: none; 
+} */
+
+.edu-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 12px;
+  opacity: 1;
 }
 
 .edu-list.open {
@@ -217,7 +224,7 @@ a:hover {
 .edu-list li {
   margin: 6px 0;
   padding-left: 8px;
-  color: #333;
+  color: #d8d3d3;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -243,7 +250,7 @@ a:hover {
   align-items: center;
   font-weight: 600;
   font-size: 1.2em;
-  color: #2c3e50;
+  color: #e5e6e8;
   gap: 20px; /* adds 20px space between title and date */
 }
 
@@ -256,12 +263,12 @@ a:hover {
 .edu-date {
   font-weight: 400;
   font-size: 0.9em;
-  color: #4b6cb7;
+  color: #d3d6de;
 }
 
 .edu-university {
   font-size: 0.95em;
-  color: #555;
+  color: #ededed;
   margin-top: 2px;
   text-align: left;
 }
@@ -269,8 +276,19 @@ a:hover {
 .edu-desc {
   margin-top: 4px;
   font-size: 0.9em;
-  color: #333;
+  color: #eae7e7;
   line-height: 1.4;
+}
+
+.edu-link {
+  color: #fff;          
+  text-decoration: none; 
+  transition: color 0.3s ease;
+}
+
+.edu-link:hover {
+  color: #d3d3d3;       
+  text-decoration: none; 
 }
 
 .exp-header {
@@ -285,7 +303,7 @@ a:hover {
   align-items: center;
   gap: 8px;
   font-size: 1.3em;
-  color: #2c3e50;
+  color: #e3e4e6;
 }
 
 /* Burger button */
@@ -294,13 +312,13 @@ a:hover {
   border: none;
   font-size: 1.2em;
   cursor: pointer;
-  color: #4b6cb7;
+  color: #dfe1e4;
   transition: color 0.3s ease, transform 0.2s ease;
   outline: none;
 }
 
 .exp-header .burger-btn:hover {
-  color: #182848;
+  color: #dee0e4;
   transform: scale(1.2);
 }
 
@@ -328,13 +346,13 @@ a:hover {
 }
 
 /* Role date same line*/
-.exp-title {
+.exp-role {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
   font-size: 1em;
-  color: #2c3e50;
+  color: #fffbfb;
   gap: 20px;
 }
 
@@ -342,13 +360,13 @@ a:hover {
 .exp-date {
   font-weight: 400;
   font-size: 0.9em;
-  color: #4b6cb7;
+  color: #ffffff;
 }
 
 /* Company */
 .exp-company {
   font-size: 0.95em;
-  color: #555;
+  color: #f3f3f3;
   margin-top: 2px;
   text-align: left;
 }
@@ -357,7 +375,7 @@ a:hover {
 .exp-desc {
   margin-top: 4px;
   font-size: 0.9em;
-  color: #333;
+  color: #f5f5f5;
   line-height: 1.4;
 }
 
@@ -395,7 +413,7 @@ a:hover {
 
 .exp-item:hover {
   transform: translateX(5px); /* small move right */
-  background-color: rgba(75, 108, 183, 0.05); /* subtle background change */
+  background-color: rgba(250, 250, 250, 0.05); /* subtle background change */
 }
 
 .exp-title {
@@ -404,7 +422,7 @@ a:hover {
   align-items: center;
   font-weight: 600;
   font-size: 1em;
-  color: #2c3e50;
+  color: #fcfcfc;
   gap: 20px;
   transition: transform 0.3s ease; /*only title moves */
 }
@@ -432,7 +450,7 @@ a:hover {
   align-items: center;
   gap: 8px;
   font-size: 1.3em;
-  color: #2c3e50;
+  color: #f3f3f3;
 }
 
 /* Burger button */
@@ -503,7 +521,7 @@ a:hover {
 }
 
 .contact-icons a:hover {
-  color: #7896d3;
+  color: #092d1a;
   transform: scale(1.2);
 }
 
@@ -521,15 +539,15 @@ a:hover {
   width: 50px;   /* diameter of button */
   height: 50px;
   border-radius: 50%;  /* oval */
-  background-color: #6a6f79;
-  color: white;
+  background-color: #2a6052;
+  color: rgb(255, 255, 255);
   font-size: 1.5em;
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
 }
 
 .contact-icons a:hover {
-  background-color: #182848;
+  background-color: #5b605f;
   transform: scale(1.2); /* scale on hover */
 }
 
@@ -546,24 +564,9 @@ a:hover {
   align-items: center;
   gap: 8px;
   font-size: 1.3em;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
-/* Burger button */
-.proj-header .burger-btn {
-  background: none;
-  border: none;
-  font-size: 1.2em;
-  cursor: pointer;
-  color: #4b6cb7;
-  transition: color 0.3s ease, transform 0.2s ease;
-  outline: none;
-}
-
-.proj-header .burger-btn:hover {
-  color: #182848;
-  transform: scale(1.2);
-}
 
 /* Collapsible list */
 .proj-list {
@@ -573,6 +576,7 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  
   opacity: 0;
 }
 
@@ -586,6 +590,7 @@ a:hover {
   margin-bottom: 15px;
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
+  opacity: 1; 
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -601,28 +606,46 @@ a:hover {
   align-items: center;
   font-weight: 600;
   font-size: 1em;
-  color: #2c3e50;
+  color: #ffffff;
+  text-shadow: 0 0 2px rgba(0,0,0,0.4);
   transition: transform 0.3s ease;
 }
 
+.project-link {
+  color: #fff;           /* λευκό title */
+  text-decoration: none; /* αφαιρούμε την underline γραμμή */
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #d3d3d3; /* λίγο πιο ανοιχτό γκρι στο hover */
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .proj-title a:hover {
-  color: #182848;
+  color: #dedede; /* ανοιχτό γκρι στο hover */
+  transform: translateX(2px); 
 }
 
 /* date right*/
 .proj-date {
   font-weight: 400;
   font-size: 0.9em;
-  color: #4b6cb7;
+  color: #eeeff2;
 }
 
 /* description */
 .proj-desc {
   margin-top: 4px;
   font-size: 0.9em;
-  color: #333;
+  color: #f8f7f7;
   line-height: 1.4;
 }
+
+
+
+
 
 /* Responsive */
 @media (max-width: 600px) {

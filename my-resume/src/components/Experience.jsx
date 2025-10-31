@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { FaBriefcase, FaBars } from "react-icons/fa";
-
+import {BriefcaseBusiness} from "lucide-react"
 const Experience = () => {
   const [open, setOpen] = useState(false);
 
@@ -36,13 +35,10 @@ const Experience = () => {
   return (
     <section className="section experience">
       <div className="exp-header">
-        <h3><FaBriefcase /> Experience</h3>
-        <button className="burger-btn" onClick={toggleMenu}>
-          <FaBars />
-        </button>
+        <h3><BriefcaseBusiness size={24} /> Experience</h3>
       </div>
 
-      <ul className={`exp-list ${open ? "open" : ""}`}>
+      <ul className="exp-list open">
         {experiences.map((exp, index) => (
           <li key={index} className="exp-item">
             <div className="exp-title">

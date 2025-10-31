@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFolder, FaBars } from "react-icons/fa";
+import {FolderOpenDot } from "lucide-react";
 
 const Projects = () => {
   const [open, setOpen] = useState(false);
@@ -16,7 +16,7 @@ const Projects = () => {
       link: "https://github.com/NektariosTs/Todos-Project"
     },
     {
-      title: "Crud Mvc app with Thmeleaf",
+      title: "Crud Mvc app with Thymeleaf",
       link: "https://github.com/NektariosTs/Spring-Hibernate"
     },
      {
@@ -36,13 +36,11 @@ const Projects = () => {
   return (
     <section className="section projects">
       <div className="proj-header">
-        <h3><FaFolder /> Projects</h3>
-        <button className="burger-btn" onClick={toggleMenu}>
-          <FaBars />
-        </button>
+        <h3><FolderOpenDot size={24}/> Projects</h3>
+
       </div>
 
-      <ul className={`proj-list ${open ? "open" : ""}`}>
+      <ul className="proj-list open">
         {projects.map((proj, index) => (
           <li key={index} className="proj-item">
             <div className="proj-title">
@@ -50,6 +48,7 @@ const Projects = () => {
                 href={proj.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
+                className="project-link"
               >
                 {proj.title}
               </a>

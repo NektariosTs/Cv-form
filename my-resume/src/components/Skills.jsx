@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaTools, FaBars } from "react-icons/fa";
+import {Wrench} from "lucide-react"
 
 const Skills = () => {
   const [open, setOpen] = useState(false);
@@ -23,13 +23,10 @@ const Skills = () => {
   return (
     <section className="section skills">
       <div className="skills-header">
-        <h3><FaTools /> Skills</h3>
-        <button className="burger-btn" onClick={toggleMenu}>
-          <FaBars />
-        </button>
+        <h3><Wrench size={24}/> Skills</h3>
       </div>
 
-      <ul className={`skills-list ${open ? "open" : ""}`}>
+      <ul className="skills-list open">
         {skills.map((skill, index) => (
           <li key={index} className="skill-item">{skill}</li>
         ))}

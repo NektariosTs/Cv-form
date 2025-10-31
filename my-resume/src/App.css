@@ -196,14 +196,21 @@ a:hover {
   margin-top: 12px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   opacity: 0;
   background: none; 
 }
 
 .edu-list.open {
-  max-height: 500px;
+  max-height: 1000px;
   opacity: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  
+}
+.edu-list.open::-webkit-scrollbar {
+  display: none; 
 }
 
 /* List items */
